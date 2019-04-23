@@ -1,6 +1,6 @@
 {
   "name": "@nuofe/ndk-lint-tool",
-  "version": "1.5.0",
+  "version": "0.0.1",
   "title": "Nuo FE Lint Tool",
   "description": "Lint tool for Nuo FE.",
   "keywords": [
