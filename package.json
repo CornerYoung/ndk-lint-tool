@@ -1,0 +1,66 @@
+{
+  "name": "@nuofe/ndk-lint-tool",
+  "version": "1.5.0",
+  "title": "Nuo FE Lint Tool",
+  "description": "Lint tool for Nuo FE.",
+  "keywords": [
+    "nuonuo",
+    "tools",
+    "nuofe",
+    "ndk",
+    "lint",
+    "tool"
+  ],
+  "author": "Nuo FE",
+  "maintainers": [
+    "WANG DONG <jackyking.cn@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuofe/ndk-lint-tool.git"
+  },
+  "bin": {
+    "ndk-lint": "./bin/ndk-lint.js"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "scripts": {
+    "dev": "npm run build && npm uninstall . -g && npm i . -g",
+    "build": "npm run build-types && npm run build-js",
+    "build-types": "tsc --emitDeclarationOnly",
+    "build-js": "babel src --out-dir lib --extensions \".ts\"",
+    "lint": "tslint --fix -p ./tsconfig.json -c ./tslint.json",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs2": "^7.4.3",
+    "@nuofe/ndk-utilities": "^2.0.0",
+    "inquirer": "^6.2.2",
+    "prettier": "^1.17.0",
+    "strip-json-comments": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/inquirer": "^6.0.0",
+    "@types/node": "^11.13.4",
+    "@types/prettier": "^1.16.2",
+    "@types/strip-json-comments": "0.0.30",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.4"
+  },
+  "engines": {
+    "node": ">=10.15.1"
+  }
+}
