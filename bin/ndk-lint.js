@@ -2,4 +2,4 @@
 
 const LintTool = require('../lib');
 
-LintTool.lint(true);
+LintTool.lint(process.argv[2] !== '-n' ? true : undefined);
