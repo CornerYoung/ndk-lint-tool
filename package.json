@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs2": "^7.4.3",
-    "@nuofe/ndk-utilities": "^3.0.0",
+    "@nuofe/ndk-utilities": "^3.1.0",
     "cross-spawn": "^6.0.5",
     "inquirer": "^6.2.2",
     "prettier": "^1.17.0",

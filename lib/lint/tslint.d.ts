@@ -1,2 +1,2 @@
-import { Options } from '../lint-options';
-export declare const check: (options: Options) => Promise<void>;
+import { Options } from '@nuofe/ndk-utilities';
+export declare const check: (options: Options.Options) => Promise<void>;
