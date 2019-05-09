@@ -44,7 +44,7 @@
     "cross-spawn": "^6.0.5",
     "inquirer": "^6.2.2",
     "prettier": "^1.17.0",
-    "strip-json-comments": "^2.0.1"
+    "strip-json-comments": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
