@@ -1,2 +1,5 @@
 import { Options } from '@nuofe/ndk-utilities';
-export declare const check: (options: Options.Options) => Promise<void>;
+declare const _default: {
+    check: (options: Options.Options) => Promise<void>;
+};
+export default _default;

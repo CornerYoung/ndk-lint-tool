@@ -35,7 +35,7 @@
     "build": "rimraf lib && npm run build-types && npm run build-js",
     "build-types": "tsc --emitDeclarationOnly",
     "build-js": "babel src --out-dir lib --extensions \".ts\"",
-    "lint": "tslint --fix -p ./tsconfig.json -c ./tslint.json",
+    "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" ./src/",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
@@ -54,16 +54,20 @@
     "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@nuofe/eslint-config-common": "^1.0.1",
     "@types/cross-spawn": "^6.0.0",
     "@types/fs-extra": "^5.1.0",
     "@types/inquirer": "^6.0.0",
     "@types/node": "^11.13.4",
     "@types/prettier": "^1.16.2",
     "@types/strip-json-comments": "0.0.30",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
     "rimraf": "^2.6.3",
-    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
   "engines": {
